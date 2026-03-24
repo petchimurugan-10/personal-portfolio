@@ -330,3 +330,95 @@ body.light {
   border-color: rgba(0, 245, 255, 0.3);
   background: rgba(0, 245, 255, 0.05);
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 767px) {
+
+  /* Fix all grid layouts to single column on mobile */
+  [style*="repeat(auto-fit, minmax(340px"],
+  [style*="repeat(auto-fit, minmax(300px"],
+  [style*="repeat(auto-fit, minmax(460px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Ensure section padding is comfortable on mobile */
+  section {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Centre all section inner containers */
+  section>div {
+    text-align: center;
+  }
+
+  /* But keep list items, form labels, info cards left-aligned */
+  li,
+  label,
+  form,
+  .glass,
+  input,
+  textarea,
+  button {
+    text-align: left;
+  }
+
+  /* Hero section — centre everything */
+  section#hero-root>div,
+  section>div>div[style*="text-align"] {
+    text-align: center !important;
+  }
+
+  /* Fix section headers left-align (section-num / h2) back to start */
+  .section-num {
+    text-align: left;
+  }
+
+  /* Prevent horizontal overflow */
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  /* Timeline dots — keep left side layout intact */
+  section#experience>div>div {
+    text-align: left !important;
+  }
+
+  /* Make buttons wrap and stay centred on mobile */
+  .btn-primary,
+  .btn-outline,
+  .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Reduce font sizes slightly on very small screens */
+  h1 {
+    font-size: clamp(38px, 10vw, 64px) !important;
+  }
+
+  h2 {
+    font-size: clamp(26px, 7vw, 36px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Extra-small screens (iPhone SE, etc) */
+  [style*="padding: \"60px 24px\""],
+  [style*="padding: \"0 24px\""] {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* 2-column info grids → 1 column */
+  [style*="gridTemplateColumns: \"1fr 1fr\""] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Flex rows that would overflow → wrap */
+  [style*="display: \"flex\""][style*="gap: \"14px\""] {
+    flex-wrap: wrap !important;
+  }
+}

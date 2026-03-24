@@ -36,7 +36,12 @@ export default function ProjectSection() {
                     </Link>
                 </motion.div>
 
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(460px, 1fr))", gap: "24px" }}>
+                <div id="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(460px, 1fr))", gap: "24px" }}>
+                    <style>{`
+                  @media (max-width: 640px) {
+                    #projects-grid { grid-template-columns: 1fr !important; }
+                  }
+                `}</style>
                     {projects.filter((p) => p.featured).map((project, i) => (
                         <motion.div
                             key={project.id}

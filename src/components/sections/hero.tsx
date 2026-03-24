@@ -5,10 +5,9 @@ import { Github, Linkedin, Mail, ArrowDown, Terminal, Download } from "lucide-re
 import { useEffect, useState } from "react";
 
 const roles = [
-    "Security-Focused Developer",
-    "Penetration Tester",
-    "WAF Engineer",
     "Cybersecurity Enthusiast",
+    "Application Security Engineer",
+    "Security-Focused Developer",
 ];
 
 function TypingEffect({ words }: { words: string[] }) {

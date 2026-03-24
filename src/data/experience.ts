@@ -90,4 +90,8 @@ export const certifications: Certification[] = [
         title: "Certified API Hacking Expert (CAPIE)",
         issuer: "CAPIE",
     },
+    {
+        title: "CCNA Cisco certified Network Associate",
+        issuer: "Cisco",
+    },
 ];

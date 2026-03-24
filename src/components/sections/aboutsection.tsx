@@ -35,25 +35,29 @@ export default function AboutSection() {
 
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "32px" }}>
                     {/* Left — Bio */}
-                    <motion.div {...fadeUp(1)} style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
-                        <p style={{ fontSize: "16px", color: "#7d8590", lineHeight: 1.8 }}>
-                            I&apos;m{" "}
-                            <span style={{ color: "#e6edf3", fontWeight: 600 }}>Petchimurugan S</span>, a
-                            security-focused CS undergraduate at{" "}
-                            <span style={{ color: "#00f5ff", fontWeight: 600 }}>KPR Institute of Engineering and Technology</span>.
-                        </p>
-                        <p style={{ fontSize: "15px", color: "#7d8590", lineHeight: 1.8 }}>
-                            I specialize in{" "}
-                            <span style={{ color: "#e6edf3", fontWeight: 500 }}>Linux-based infrastructure protection</span>,{" "}
-                            <span style={{ color: "#e6edf3", fontWeight: 500 }}>web vulnerability mitigation</span>, and{" "}
-                            <span style={{ color: "#e6edf3", fontWeight: 500 }}>security tool development</span> in C++ and Python.
-                        </p>
-                        <p style={{ fontSize: "15px", color: "#7d8590", lineHeight: 1.8 }}>
-                            I enjoy finding vulnerabilities, understanding attack surfaces, and building defenses that actually work.
-                        </p>
+                    <motion.div {...fadeUp(1)} style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
+                            <p style={{ fontSize: "16px", color: "#7d8590", lineHeight: 1.8 }}>
+                                I&apos;m{" "}
+                                <span style={{ color: "#e6edf3", fontWeight: 600 }}>Petchimurugan S</span>, a
+                                security-focused CS undergraduate at{" "}
+                                <span style={{ color: "#00f5ff", fontWeight: 600 }}>KPR Institute of Engineering and Technology</span>.
+                            </p>
+                            <p style={{ fontSize: "15px", color: "#7d8590", lineHeight: 1.8 }}>
+                                I specialize in{" "}
+                                <span style={{ color: "#e6edf3", fontWeight: 500 }}>Linux-based infrastructure protection</span>,{" "}
+                                <span style={{ color: "#e6edf3", fontWeight: 500 }}>web vulnerability mitigation</span>, and{" "}
+                                <span style={{ color: "#e6edf3", fontWeight: 500 }}>security tool development</span> in C++ and Python.
+                            </p>
+
+                            <p style={{ fontSize: "15px", color: "#7d8590", lineHeight: 1.8 }}>
+                                <span style={{color: "#00f5ff",fontWeight:600}}>Interests:</span>{" "} 
+                                OWASP Top 10 · Threat Modeling · Vulnerability Research · Secure Code Review · Network Defense · CTFs
+                            </p>
+                        </div>
 
                         {/* Info grid */}
-                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginTop: "8px" }}>
+                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
                             {[
                                 { label: "Email", value: "petchimurugan.110@gmail.com", icon: Mail },
                                 { label: "Phone", value: "+91 9025267764", icon: Phone },
@@ -69,11 +73,8 @@ export default function AboutSection() {
                                 </div>
                             ))}
                         </div>
-                    </motion.div>
 
-                    {/* Right — cards */}
-                    <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                        {/* Education */}
+                        {/* Education - Moved to Left Column for balance */}
                         <motion.div {...fadeUp(2)} style={cardStyle}>
                             <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
                                 <div style={{ width: "36px", height: "36px", borderRadius: "10px", background: "rgba(0,255,136,0.1)", border: "1px solid rgba(0,255,136,0.25)", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -91,7 +92,10 @@ export default function AboutSection() {
                                 </span>
                             </div>
                         </motion.div>
+                    </motion.div>
 
+                    {/* Right — cards */}
+                    <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
                         {/* Achievements */}
                         <motion.div {...fadeUp(3)} style={cardStyle}>
                             <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
