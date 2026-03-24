@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, Send, Phone, MapPin, CheckCircle } from "lucide-react";
 import { useState } from "react";
+import { contactFormSchema } from "@/lib/validators";
 
 export default function ContactSection() {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -14,14 +15,28 @@ export default function ContactSection() {
         e.preventDefault();
         setSubmitting(true);
         setError("");
+
+        // Client-side validation
+        const validation = contactFormSchema.safeParse(form);
+        if (!validation.success) {
+            setError(validation.error.issues[0]?.message || "Invalid form data");
+            setSubmitting(false);
+            return;
+        }
+
         try {
             const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(form),
             });
-            if (res.ok) { setSubmitted(true); setForm({ name: "", email: "", message: "" }); }
-            else setError("Something went wrong. Please try again.");
+            const data = await res.json();
+            if (res.ok) {
+                setSubmitted(true);
+                setForm({ name: "", email: "", message: "" });
+            } else {
+                setError(data.error || "Something went wrong. Please try again.");
+            }
         } catch { setError("Network error. Please try again."); }
         finally { setSubmitting(false); }
     };

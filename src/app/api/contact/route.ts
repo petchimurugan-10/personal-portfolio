@@ -1,14 +1,22 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import { contactFormSchema } from "@/lib/validators";
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, email, message } = body;
 
-    if (!name || !email || !message) {
-      return NextResponse.json({ error: "All fields are required." }, { status: 400 });
+    // Validate with Zod (includes XSS protection)
+    const validation = contactFormSchema.safeParse(body);
+    
+    if (!validation.success) {
+      return NextResponse.json(
+        { error: validation.error.issues[0]?.message || "Invalid form data" },
+        { status: 400 }
+      );
     }
+
+    const { name, email, message } = validation.data;
 
     // Validate env vars are configured
     if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
