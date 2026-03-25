@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import ProjectSection from "@/components/sections/projectsection";
+import AllProjectsSection from "@/components/sections/allprojectssection";
 
 export const metadata: Metadata = {
     title: "Projects — Petchimurugan S",
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
     return (
         <div className="pt-16">
-            <ProjectSection />
+            <AllProjectsSection />
         </div>
     );
 }

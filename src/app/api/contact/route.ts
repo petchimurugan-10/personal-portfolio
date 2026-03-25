@@ -20,7 +20,6 @@ export async function POST(req: Request) {
 
     // Validate env vars are configured
     if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-      console.warn("⚠️  GMAIL_USER / GMAIL_APP_PASSWORD not set in .env.local — email not sent.");
       // Still return success so the form UX works during development
       return NextResponse.json({ success: true }, { status: 200 });
     }
@@ -71,7 +70,6 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (err) {
-    console.error("Contact API error:", err);
     return NextResponse.json({ error: "Failed to send email." }, { status: 500 });
   }
 }

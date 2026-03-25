@@ -133,9 +133,9 @@ export default function HeroSection() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     style={{ maxWidth: "600px", margin: "0 auto 40px", fontSize: "16px", color: "#7d8590", lineHeight: 1.7 }}
                 >
-                    Security-focused CS undergraduate specializing in{" "}
-                    <span style={{ color: "#00f5ff", fontWeight: 600 }}>Networking & Cybersecurity</span>.
-                    Linux infrastructure protection, web vulnerability mitigation, and security tool development.
+                    CS undergrad who thinks like an attacker to build like a defender —{" "}
+                    <span style={{ color: "#00f5ff", fontWeight: 600 }}>Cybersecurity & Application Security</span>{" "}
+                    is where I live. Exploring the web, digging into vulnerabilities, and working toward securing real-world infrastructure.
                 </motion.p>
 
                 {/* CTAs */}
@@ -164,7 +164,7 @@ export default function HeroSection() {
                     style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "14px" }}
                 >
                     {[
-                        { icon: Github, href: "https://github.com/petchimurugan", label: "GitHub" },
+                        { icon: Github, href: "https://github.com/petchimurugan-10", label: "GitHub" },
                         { icon: Linkedin, href: "https://linkedin.com/in/petchimurugan", label: "LinkedIn" },
                         { icon: Mail, href: "mailto:petchimurugan.110@gmail.com", label: "Email" },
                     ].map(({ icon: Icon, href, label }) => (

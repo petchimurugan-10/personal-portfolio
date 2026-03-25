@@ -1,39 +1,61 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Shield, Terminal, AlertTriangle } from "lucide-react";
+import { Github, ExternalLink, Shield, Terminal, AlertTriangle, ArrowLeft } from "lucide-react";
 import { projects } from "@/data/projects";
 import Link from "next/link";
 
-export default function ProjectSection() {
+export default function AllProjectsSection() {
     return (
         <section id="projects" style={{ padding: "100px 0", position: "relative", background: "rgba(13,17,23,0.97)" }}>
             <div className="grid-bg" style={{ position: "absolute", inset: 0, opacity: 0.2, pointerEvents: "none" }} />
             <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px", position: "relative", zIndex: 2 }}>
 
+                {/* Back Button */}
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    style={{ marginBottom: "32px" }}
+                >
+                    <Link
+                        href="/#projects"
+                        style={{
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "8px",
+                            fontSize: "13px",
+                            fontWeight: 600,
+                            color: "#00f5ff",
+                            textDecoration: "none",
+                            padding: "8px 14px",
+                            borderRadius: "8px",
+                            border: "1px solid rgba(0,245,255,0.25)",
+                            transition: "all 0.3s ease",
+                        }}
+                        onMouseEnter={e => {
+                            (e.currentTarget as HTMLElement).style.background = "rgba(0,245,255,0.08)";
+                            (e.currentTarget as HTMLElement).style.borderColor = "rgba(0,245,255,0.4)";
+                        }}
+                        onMouseLeave={e => {
+                            (e.currentTarget as HTMLElement).style.background = "transparent";
+                            (e.currentTarget as HTMLElement).style.borderColor = "rgba(0,245,255,0.25)";
+                        }}
+                    >
+                        <ArrowLeft size={14} />
+                        Back
+                    </Link>
+                </motion.div>
+
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-                    style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: "16px", marginBottom: "56px" }}
+                    style={{ marginBottom: "56px" }}
                 >
-                    <div>
-                        <span className="section-num">04. projects</span>
-                        <h2 style={{ fontSize: "36px", fontWeight: 800, color: "#e6edf3", letterSpacing: "-1px" }} className="section-line">
-                            Featured Projects
-                        </h2>
-                    </div>
-                    <Link
-                        href="/projects"
-                        style={{
-                            fontSize: "13px", fontWeight: 600, color: "#00f5ff",
-                            textDecoration: "none", padding: "8px 18px", borderRadius: "9px",
-                            border: "1px solid rgba(0,245,255,0.35)", transition: "all 0.2s ease",
-                        }}
-                        onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "rgba(0,245,255,0.08)"; }}
-                        onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "transparent"; }}
-                    >
-                        View All →
-                    </Link>
+                    <span className="section-num">all. projects</span>
+                    <h2 style={{ fontSize: "36px", fontWeight: 800, color: "#e6edf3", letterSpacing: "-1px" }} className="section-line">
+                        All Projects
+                    </h2>
                 </motion.div>
 
                 <div id="projects-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(460px, 1fr))", gap: "24px" }}>
@@ -42,7 +64,7 @@ export default function ProjectSection() {
                     #projects-grid { grid-template-columns: 1fr !important; }
                   }
                 `}</style>
-                    {projects.filter((p) => p.featured).map((project, i) => (
+                    {projects.map((project, i) => (
                         <motion.div
                             key={project.id}
                             initial={{ opacity: 0, y: 30 }}

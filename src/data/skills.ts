@@ -25,13 +25,14 @@ export const skillCategories: SkillCategory[] = [
             "Snyk",
             "Nikto",
             "Metasploit",
+            "Packet tracer",
         ],
     },
     {
         id: "networking",
         name: "Networking",
         color: "purple",
-        skills: ["IP", "HTTPS/TLS", "DNS", "ARP", "TCP/UDP", "VLAN"],
+        skills: ["IP", "HTTPS/TLS", "DNS", "ARP", "TCP/UDP", "VLAN", "DHCP"],
     },
     {
         id: "databases",
@@ -43,6 +44,6 @@ export const skillCategories: SkillCategory[] = [
         id: "tools",
         name: "Tools & Platforms",
         color: "orange",
-        skills: ["Git", "REST APIs", "Postman", "Nginx", "Linux (Ubuntu)", "Log Analysis", "Network Analysis", "System Administration"],
+        skills: ["Git", "REST APIs", "Postman", "Nginx", "Linux (Ubuntu,kali linux)", "Log Analysis", "Network Analysis", "Typescript", "Prisma"],
     },
 ];
