@@ -8,16 +8,15 @@ export interface SkillCategory {
 export const skillCategories: SkillCategory[] = [
     {
         id: "languages",
-        name: "Languages",
+        name: "Programming Languages",
         color: "cyan",
-        skills: ["Python", "C", "C++", "Java", "Bash"],
+        skills: ["Python", "C", "C++", "Java", "Bash", "JavaScript"],
     },
     {
         id: "security",
         name: "Security Tools",
         color: "red",
         skills: [
-            "OWASP Top 10",
             "Burp Suite",
             "OWASP ZAP",
             "Wireshark",
@@ -26,13 +25,14 @@ export const skillCategories: SkillCategory[] = [
             "Nikto",
             "Metasploit",
             "Packet tracer",
+            "SQLmap",   
         ],
     },
     {
         id: "networking",
         name: "Networking",
         color: "purple",
-        skills: ["IP", "HTTPS/TLS", "DNS", "ARP", "TCP/UDP", "VLAN", "DHCP"],
+        skills: ["IP", "HTTPS/TLS", "DNS", "Firewall", "VPN", "ARP", "TCP/UDP", "VLAN", "DHCP"],
     },
     {
         id: "databases",

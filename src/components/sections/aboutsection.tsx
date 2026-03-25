@@ -40,8 +40,8 @@ export default function AboutSection() {
                             <p style={{ fontSize: "16px", color: "#7d8590", lineHeight: 1.8 }}>
                                 I&apos;m{" "}
                                 <span style={{ color: "#e6edf3", fontWeight: 600 }}>Petchimurugan S</span>, a
-                                security-focused CS undergraduate at{" "}
-                                <span style={{ color: "#00f5ff", fontWeight: 600 }}>KPR Institute of Engineering and Technology</span>.
+                                security-focused CS undergraduate at {" "}
+                                KPR Institute of Engineering and Technology, Coimbatore, Tamilnadu.
                             </p>
                             <p style={{ fontSize: "15px", color: "#7d8590", lineHeight: 1.8 }}>
                                 I specialize in{" "}

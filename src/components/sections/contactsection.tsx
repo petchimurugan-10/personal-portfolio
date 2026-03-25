@@ -75,7 +75,7 @@ export default function ContactSection() {
                         Get In Touch
                     </h2>
                     <p style={{ fontSize: "15px", color: "#7d8590", maxWidth: "500px", margin: "0 auto", lineHeight: 1.7 }}>
-                        Have a security challenge, project idea, or just want to connect? I&apos;m always open to new opportunities.
+                        Open to opportunities the same way attack surfaces are open-always.
                     </p>
                 </motion.div>
 
@@ -177,7 +177,7 @@ export default function ContactSection() {
                                         <label style={{ display: "block", fontSize: "11px", fontFamily: "JetBrains Mono, monospace", color: "#7d8590", marginBottom: "7px", letterSpacing: "1px", textTransform: "uppercase" }}>Message</label>
                                         <textarea
                                             required rows={5}
-                                            placeholder="Tell me about your project or opportunity..."
+                                            placeholder="Leave your message here..."
                                             value={form.message}
                                             onChange={e => setForm({ ...form, message: e.target.value })}
                                             style={{ ...inputStyle, resize: "none" }}
@@ -206,7 +206,7 @@ export default function ContactSection() {
                                         {submitting ? (
                                             <><div style={{ width: "16px", height: "16px", border: "2px solid rgba(13,17,23,0.4)", borderTopColor: "#0d1117", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />Sending...</>
                                         ) : (
-                                            <><Send size={14} />Send Message</>
+                                            <><Send size={14} />Ping Me</>
                                         )}
                                     </button>
                                 </form>

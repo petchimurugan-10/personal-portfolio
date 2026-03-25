@@ -52,7 +52,7 @@ export default function AllProjectsSection() {
                     initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
                     style={{ marginBottom: "56px" }}
                 >
-                    <span className="section-num">all. projects</span>
+                    <span className="section-num">all projects</span>
                     <h2 style={{ fontSize: "36px", fontWeight: 800, color: "#e6edf3", letterSpacing: "-1px" }} className="section-line">
                         All Projects
                     </h2>

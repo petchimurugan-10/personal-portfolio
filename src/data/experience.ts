@@ -87,8 +87,12 @@ export const certifications: Certification[] = [
         issuer: "Cisco NetAcad",
     },
     {
+        title:"ISC2 Certified in Cyber security (on going)",
+        issuer:"ISC2",
+    },
+    {
         title: "Certified API Hacking Expert (CAPIE)",
-        issuer: "CAPIE",
+        issuer: "Udemy",
     },
     {
         title: "CCNA Cisco certified Network Associate",
