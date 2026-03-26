@@ -133,9 +133,9 @@ export default function HeroSection() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     style={{ maxWidth: "600px", margin: "0 auto 40px", fontSize: "16px", color: "#7d8590", lineHeight: 1.7 }}
                 >
-                    CS undergrad who thinks like an attacker to build like a defender —{" "}
-                    <span style={{ color: "#00f5ff", fontWeight: 600 }}>Cybersecurity & Application Security</span>{" "}
-                    is where I live. Exploring the web, digging into vulnerabilities, and working toward securing real-world infrastructure.
+                    CS undergrad passionate about{" "}
+                    <span style={{ color: "#00f5ff", fontWeight: 600 }}>Cybersecurity & Application Security</span>.{" "}
+                    I enjoy exploring vulnerabilities, understanding how attacks work, and using that mindset to build more secure systems.
                 </motion.p>
 
                 {/* CTAs */}
