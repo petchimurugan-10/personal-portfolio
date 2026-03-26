@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 const roles = [
     "Cybersecurity Enthusiast",
     "Application Security Engineer",
-    "Security-Focused Developer",
 ];
 
 function TypingEffect({ words }: { words: string[] }) {

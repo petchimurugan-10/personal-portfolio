@@ -26,7 +26,7 @@ export default function Footer() {
                         <div>
                             <p style={{ fontWeight: 700, fontSize: "14px", color: "#e6edf3" }}>Petchimurugan S</p>
                             <p style={{ fontSize: "11px", color: "#7d8590", fontFamily: "JetBrains Mono, monospace", marginTop: "2px" }}>
-                                Security-Focused Developer
+                                Aspiring Application-Security Engineer
                             </p>
                         </div>
                     </div>

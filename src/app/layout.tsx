@@ -4,7 +4,7 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: "Petchimurugan S — Security-Focused Developer",
+  title: "Petchimurugan's Portfolio",
   description:
     "Personal portfolio of Petchimurugan S — a cybersecurity-focused CS undergraduate specializing in Networking & Cybersecurity.",
   authors: [{ name: "Petchimurugan S" }],
