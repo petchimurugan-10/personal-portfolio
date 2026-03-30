@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowDown, Terminal, Download } from "lucide-react";
+import { Github, Linkedin, Mail, Instagram, ArrowDown, Terminal, Download } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const roles = [
@@ -165,6 +165,7 @@ export default function HeroSection() {
                     {[
                         { icon: Github, href: "https://github.com/petchimurugan-10", label: "GitHub" },
                         { icon: Linkedin, href: "https://linkedin.com/in/petchimurugan", label: "LinkedIn" },
+                        { icon: Instagram, href: "https://www.instagram.com/mr_monarc_/", label: "Instagram" },
                         { icon: Mail, href: "mailto:petchimurugan.110@gmail.com", label: "Email" },
                     ].map(({ icon: Icon, href, label }) => (
                         <a

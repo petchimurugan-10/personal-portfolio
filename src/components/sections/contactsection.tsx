@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Send, Phone, MapPin, CheckCircle } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram, Send, Phone, MapPin, CheckCircle } from "lucide-react";
 import { useState } from "react";
 import { contactFormSchema } from "@/lib/validators";
 
@@ -58,6 +58,7 @@ export default function ContactSection() {
     const socials = [
         { icon: Github, label: "GitHub", href: "https://github.com/petchimurugan-10" },
         { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/petchimurugan" },
+        { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/mr_monarc_/" },
         { icon: Mail, label: "Email", href: "mailto:petchimurugan.110@gmail.com" },
     ];
 
